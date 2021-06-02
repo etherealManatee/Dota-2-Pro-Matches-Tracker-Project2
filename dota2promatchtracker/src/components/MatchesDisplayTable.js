@@ -16,7 +16,7 @@ function MatchesDisplayTable({data}) {
     // })
     return (
             <Container>
-                <Row className="mt-4">
+                <Row className="mt-2">
                     <Table striped bordered hover variant="dark">
                         <thead>
                         <tr>
@@ -40,7 +40,6 @@ function MatchesDisplayTable({data}) {
                         </tbody>
                     </Table>
                 </Row>
-                <PageNavigation/>
             </Container>
     );
 }
