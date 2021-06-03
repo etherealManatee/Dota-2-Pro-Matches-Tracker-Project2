@@ -50,12 +50,7 @@ body, html {
   width: auto;
 }
 
-.pageNumbers{
-  color: white !important;
-  background-color: darkred;
-}
-
-.numberActive{
-  background-color: aquamarine;
-  color: black !important;
+.winningTeam {
+  height: 50px;
+  width: auto;
 }
