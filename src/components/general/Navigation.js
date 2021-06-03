@@ -7,7 +7,7 @@ function Navigation(props) {
     return (
         <Navbar bg="dark" variant="dark" expand="lg">
             <Container>
-                <Navbar.Brand to="/hello" className="nav-link active"><img src={dota2_icon} className="dotaicon"/> Dota 2 Pro Matches Tracker</Navbar.Brand>
+                <Navbar.Brand to="/hello" className="nav-link active"><img src={dota2_icon} className="dotaicon" alt="dota2icon"/> Dota 2 Pro Matches Tracker</Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto">
