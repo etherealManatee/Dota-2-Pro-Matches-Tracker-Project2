@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import MatchesDisplayTable from "../MatchesDisplayTable";
+import MatchesDisplayTable from "../library/MatchesDisplayTable";
 //import { useLocation } from 'react-router-dom';
 import axios from "axios";
 import {Button, Col, Container, Row} from "react-bootstrap";
@@ -35,13 +35,11 @@ function HomePage() {
         setPageNumber(prevState => prevState+= 1)
         setTheIds(prevState => [...prevState,data[0].match_id])
         let lastId = data[data.length-1].match_id
-        console.log("n",lastId)
         axios.get(`https://api.opendota.com/api/proMatches?less_than_match_id=${lastId}`)
             .then(suc=>{
                 setData(suc.data)
             })
     }
-    console.log("o",theIds)
 
     function prevPage(){
         setPageNumber(prevState => prevState -= 1)

@@ -3,6 +3,8 @@ import {BrowserRouter, Switch, Route} from "react-router-dom";
 import Navigation from "./components/general/Navigation";
 import HomePage from "./components/pages/HomePage";
 import MatchPage from "./components/pages/MatchPage";
+import TeamsPage from "./components/pages/TeamsPage";
+import SelectedTeamPage from "./components/pages/SelectedTeamPage";
 
 function App() {
 
@@ -15,6 +17,12 @@ function App() {
             </Route>
             <Route path="/match/:matchid">
                 <MatchPage />
+            </Route>
+            <Route path="/teams">
+                <TeamsPage />
+            </Route>
+            <Route path="/team/:teamid">
+                <SelectedTeamPage />
             </Route>
         </Switch>
       </BrowserRouter>

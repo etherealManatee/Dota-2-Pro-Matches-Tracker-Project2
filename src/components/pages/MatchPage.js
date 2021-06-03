@@ -1,8 +1,7 @@
 import React, {useEffect, useState} from 'react';
-import MatchesDisplayTable from "../MatchesDisplayTable";
 import axios from "axios";
 import {useParams} from 'react-router-dom'
-import {Col, Container, Row, Tab, Table} from "react-bootstrap";
+import {Col, Container, Row, Table} from "react-bootstrap";
 import moment from 'moment'
 
 
@@ -12,7 +11,6 @@ function MatchPage() {
     const [heroes, setHeroes] = useState({})
     const [radiant, setRadiant] = useState([])
     const [dire, setDire] = useState([])
-
 
     useEffect(()=>{
         axios.get(`https://api.opendota.com/api/matches/${matchid}`)
@@ -25,11 +23,6 @@ function MatchPage() {
                 console.log("failure3")
             })
     },[matchid])
-    console.log(matchData)
-    console.log(radiant)
-    console.log(dire)
-    console.log(heroes)
-    // console.log(moment.duration(matchData.duration, 'minutes'))
 
     useEffect(()=>{
         axios.get("https://api.opendota.com/api/constants/heroes")
@@ -81,7 +74,7 @@ function MatchPage() {
                 <Col className="col-4 text-white">
                     <Row className="justify-content-center">Match ID: {matchid}</Row>
                     <Row className="justify-content-center">{moment(matchData.start_time*1000).endOf('hour').fromNow()}</Row>
-                    <Row className="justify-content-center mt-3">*insert match duration here*</Row>
+                    <Row className="justify-content-center mt-3">-match-duration-suppose-to-be-here-</Row>
                     <Row className="justify-content-center mt-3"><h5>SCORE</h5></Row>
                     <Row className="justify-content-center">
                         {matchData.radiant_win ?

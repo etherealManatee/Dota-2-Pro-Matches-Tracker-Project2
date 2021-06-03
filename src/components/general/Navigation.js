@@ -11,7 +11,7 @@ function Navigation(props) {
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto">
-                        <NavLink to="/">Home</NavLink>
+                        <NavLink to="/" className="mr-4">Home</NavLink>
                         <NavLink to="/teams">Teams</NavLink>
                     </Nav>
                 </Navbar.Collapse>

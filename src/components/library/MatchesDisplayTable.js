@@ -1,7 +1,7 @@
-import React, {useRef} from 'react';
-import {Col, Container, Row, Table} from "react-bootstrap";
+import React from 'react';
+import {Container, Row, Table} from "react-bootstrap";
 import moment from 'moment'
-import winner_icon from "../images/winner-icon.png"
+import winner_icon from "../../images/winner-icon.png"
 import {Link} from "react-router-dom";
 // moment.locale()
 
@@ -14,9 +14,7 @@ function MatchesDisplayTable({data}) {
     //     //     console.log('hello')
     //     // }
     // })
-    function clicked(e){
-        console.log(e.target.value)
-    }
+
     return (
             <Container>
                 <Row className="mt-2">
@@ -33,7 +31,7 @@ function MatchesDisplayTable({data}) {
                         <tbody>
                         {data.map((e,i) => (
                             <tr key={i}>
-                                <td><Link to={`/match/${e.match_id}`} onClick={clicked}>{e.match_id}</Link></td>
+                                <td><Link to={`/match/${e.match_id}`}>{e.match_id}</Link></td>
                                 <td>{e.radiant_win && <img src={winner_icon} className="winnericon" alt="win"/>} {e.radiant_name}</td>
                                 <td>{!e.radiant_win && <img src={winner_icon} className="winnericon" alt="win"/>} {e.dire_name}</td>
                                 <td>{moment(e.start_time * 1000).format("Do MMMM YYYY h:mm a")}</td>
