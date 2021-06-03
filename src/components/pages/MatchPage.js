@@ -62,7 +62,7 @@ function MatchPage() {
                 <Col className="col-4 text-white">
                     <Row className="justify-content-center">Match ID: {matchid}</Row>
                     <Row className="justify-content-center">{moment(matchData.start_time*1000).endOf('hour').fromNow()}</Row>
-                    <Row className="justify-content-center">{moment.duration(matchData?.duration)}</Row>
+                    <Row className="justify-content-center"></Row>
                     <Row className="justify-content-center">
 
                     </Row>
