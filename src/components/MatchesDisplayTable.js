@@ -34,8 +34,8 @@ function MatchesDisplayTable({data}) {
                         {data.map((e,i) => (
                             <tr key={i}>
                                 <td><Link to={`/match/${e.match_id}`} onClick={clicked}>{e.match_id}</Link></td>
-                                <td>{e.radiant_win && <img src={winner_icon} className="winnericon" />} {e.radiant_name}</td>
-                                <td>{!e.radiant_win && <img src={winner_icon} className="winnericon" />} {e.dire_name}</td>
+                                <td>{e.radiant_win && <img src={winner_icon} className="winnericon" alt="win"/>} {e.radiant_name}</td>
+                                <td>{!e.radiant_win && <img src={winner_icon} className="winnericon" alt="win"/>} {e.dire_name}</td>
                                 <td>{moment(e.start_time * 1000).format("Do MMMM YYYY h:mm a")}</td>
                                 <td>{e.league_name}</td>
                             </tr>

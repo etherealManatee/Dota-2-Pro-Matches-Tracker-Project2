@@ -55,6 +55,10 @@ body, html {
   width: auto;
 }
 .losingTeam{
-  height: 25px;
+  height: 35px;
   width: auto;
+}
+
+.heroImage{
+  height: 40px;
 }
