@@ -1,8 +1,6 @@
 import './App.css';
 import {BrowserRouter, Switch, Route} from "react-router-dom";
 import Navigation from "./components/general/Navigation";
-import { useEffect, useState} from "react";
-import axios from "axios";
 import HomePage from "./components/pages/HomePage";
 import MatchPage from "./components/pages/MatchPage";
 
