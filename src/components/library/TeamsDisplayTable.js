@@ -13,7 +13,7 @@ function TeamsDisplayTable({teams}) {
     let filtered = teams.filter(filtering)
     useEffect(()=>{
         setFilteredTeams(filtered)
-    },[filtered])
+    },[teams])
 
     return (
         <Container>
