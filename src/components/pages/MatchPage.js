@@ -23,6 +23,8 @@ function MatchPage() {
                 console.log("failure3")
             })
     },[matchid])
+    console.log(matchData)
+    console.log(moment.duration(matchData.duration))
 
     useEffect(()=>{
         axios.get("https://api.opendota.com/api/constants/heroes")
@@ -74,7 +76,7 @@ function MatchPage() {
                 <Col className="col-4 text-white">
                     <Row className="justify-content-center">Match ID: {matchid}</Row>
                     <Row className="justify-content-center">{moment(matchData.start_time*1000).endOf('hour').fromNow()}</Row>
-                    <Row className="justify-content-center mt-3">-match-duration-suppose-to-be-here-</Row>
+                    <Row className="justify-content-center mt-3">{moment.duration(matchData.duration*1000).asMinutes()}</Row>
                     <Row className="justify-content-center mt-3"><h5>SCORE</h5></Row>
                     <Row className="justify-content-center">
                         {matchData.radiant_win ?

@@ -10,8 +10,9 @@ function TeamsDisplayTable({teams}) {
         return ele.last_match_time > 1601139882
     }
 
-    let filtered = teams.filter(filtering)
+
     useEffect(()=>{
+        let filtered = teams.filter(filtering)
         setFilteredTeams(filtered)
     },[teams])
 
