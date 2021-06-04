@@ -23,8 +23,6 @@ function MatchPage() {
                 console.log("failure3")
             })
     },[matchid])
-    console.log(matchData)
-    console.log(moment.duration(matchData.duration))
 
     useEffect(()=>{
         axios.get("https://api.opendota.com/api/constants/heroes")
